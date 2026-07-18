@@ -2,8 +2,86 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:"Source Sans Pro", Helvetica, sans-serif;
 }
 
+/* header */
+#header1{
+    height: 10vh;
+    background-color: #0026ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+}
+header>a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    text-decoration: none;
+}
+header>a>strong{
+    background-color: white;
+    color: #0026ff;
+    padding: 4px 5px;
+}
+header>nav{
+   color: white;
+}
+
+
+/* section */
+section{
+    height: 80vh;
+    background-color: #0026ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 50px;
+}
+
+section>header{
+    width: 100%;
+    border-bottom: 3px solid white;
+    padding: 20px;
+    color: white;
+    font-size: 28px;
+}
+section>.inner{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    line-height: 20px;
+}
+section>.inner>a>button{
+
+    padding: 15px 15px;
+    font-size: 14px;
+    color: white;
+    border: 2px solid white;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+/* main */
 main{
     display: grid;
     grid-template-rows: repeat(3,450px);
@@ -95,6 +173,7 @@ article>div:hover{
 
 
 
+
 @media (max-width:425px) {
     main{
         grid-template-rows: repeat(6,400px);
@@ -103,5 +182,17 @@ article>div:hover{
 
     .art2,.art3,.art6{
         grid-column: span 1;
+    }
+    #header1>a>p{
+        display: none;
+    }
+    section{
+        height: 30%;
+    }
+    section>header>h1{
+        font-size: 25px;
+    }
+    section>.inner{
+        flex-direction: column;
     }
 }
